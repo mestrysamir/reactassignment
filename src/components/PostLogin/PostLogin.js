@@ -2,6 +2,7 @@ import React from 'react';
 import {
     Switch,
     Route,
+    Redirect,
 
 } from "react-router-dom";
 
@@ -20,6 +21,7 @@ function PostLogin() {
                 <Route exact path="/">
                     <Dashboard />
                 </Route>
+                <Redirect to='/' />
             </Switch>
         </>
 

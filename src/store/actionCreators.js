@@ -7,7 +7,17 @@ export const FETCH_DATA = 'FETCH_DATA';
 export const API_ERROR = 'API_ERROR';
 
 export const login = () => {
+    sessionStorage.setItem('token', Math.random().toString(2));
     return { type: LOGIN }
+}
+
+export const checkLogin = () => {
+    return async (dispatch) => {
+        if (sessionStorage.getItem('token')) {
+            dispatch({ type: LOGIN })
+        }
+        return
+    }
 }
 
 export const apiError = () => {
@@ -16,6 +26,7 @@ export const apiError = () => {
 
 
 export const logout = () => {
+    sessionStorage.removeItem('token');
     return { type: LOGOUT }
 }
 
