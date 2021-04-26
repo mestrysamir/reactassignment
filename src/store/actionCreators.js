@@ -25,9 +25,9 @@ export const fetch = (payload) => {
 
 export const fetchData = () => {
     return async (dispatch) => {
-        axios.get('https://dummy.restapiexample.com/api/v1/employees')
+        axios.get('https://jsonplaceholder.typicode.com/users')
             .then(function (response) {
-                dispatch(fetch(response?.data?.data));
+                dispatch(fetch(response?.data));
                 console.log(response);
             })
             .catch(function (error) {

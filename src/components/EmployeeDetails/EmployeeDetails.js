@@ -82,14 +82,16 @@ export default function EmployeeDetails() {
                 <CardContent>
                     <Grid container spacing={3}>
                         <Grid item xs={4} md={3}>
-                            <img src={employee?.profile_image || profile} width="100%" alt={employee?.employee_name} />
+                            <img src={employee?.profile_image || profile} width="100%" alt={employee?.name} />
                         </Grid>
 
-                        <Grid item xs={8} md={4}>
+                        <Grid item xs={8} md={9}>
                             <Typography className={classes.typo}>
-                                <strong>Name: </strong> {employee?.employee_name} <br />
-                                <strong>Salary: </strong> {employee?.employee_salary} <br />
-                                <strong>Age: </strong> {employee?.employee_age} <br />
+                                <strong>Name: </strong> {employee?.name} <br />
+                                <strong>Email: </strong> {employee?.email} <br />
+                                <strong>Phone: </strong> {employee?.phone} <br />
+                                <strong>Website: </strong> {employee?.website} <br />
+                                <strong>Company: </strong> {employee?.company?.name} <br />
                             </Typography>
                         </Grid>
 

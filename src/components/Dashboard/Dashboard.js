@@ -48,7 +48,7 @@ export default function Dashboard() {
         const searchKey = e.target.value?.toLowerCase();
         if (data?.length) {
             setFilterData(data.filter((val) => {
-                return val?.employee_name?.toLowerCase().includes(searchKey)
+                return val?.name?.toLowerCase().includes(searchKey)
             }))
         }
 

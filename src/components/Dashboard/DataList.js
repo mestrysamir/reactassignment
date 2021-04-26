@@ -33,7 +33,7 @@ export default function DataList({ data }) {
             <List className={classes.List}>
                 {data?.map((emp) => {
                     return (<ListItem button key={emp.id} onClick={() => history.push(`/employee/${emp.id}`)}>
-                        <ListItemText primary={emp.employee_name} />
+                        <ListItemText primary={emp.name} />
                     </ListItem>)
                 })}
             </List>
